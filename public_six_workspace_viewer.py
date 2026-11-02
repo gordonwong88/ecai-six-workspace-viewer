@@ -115,8 +115,8 @@ def matrix(df, height=340, show_labels=False):
             customdata=[[r['action']]],hovertemplate='%{fullData.name}<br>Attention: %{x}<br>Urgency: %{y}<br>%{customdata[0]}<extra></extra>'))
     fig.add_annotation(x=88,y=95,text='ACT NOW',showarrow=False,font=dict(size=10,color='#976A2D'))
     fig.update_layout(height=height,showlegend=False,paper_bgcolor='white',plot_bgcolor='white',margin=dict(l=4,r=6,t=12,b=10),
-        xaxis=dict(title='Management attention',range=[20,100],gridcolor='#E7ECF2',zeroline=False,tickfont=dict(size=10,color='#637C9A'),titlefont=dict(size=11,color='#637C9A')),
-        yaxis=dict(title='Urgency',range=[0,100],gridcolor='#E7ECF2',zeroline=False,tickfont=dict(size=10,color='#637C9A'),titlefont=dict(size=11,color='#637C9A')))
+        xaxis=dict(title=dict(text='Management attention',font=dict(size=11,color='#637C9A')),range=[20,100],gridcolor='#E7ECF2',zeroline=False,tickfont=dict(size=10,color='#637C9A')),
+        yaxis=dict(title=dict(text='Urgency',font=dict(size=11,color='#637C9A')),range=[0,100],gridcolor='#E7ECF2',zeroline=False,tickfont=dict(size=10,color='#637C9A')))
     st.plotly_chart(fig,use_container_width=True,config={'displayModeBar':False})
 
 
